@@ -1,11 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def Welcome():
-    return "Welcome to my website"
+    return "<h1> Welcome </h1>"
 
 
 @app.route("/Home")
@@ -20,7 +20,7 @@ def Gallery():
 
 @app.route("/contact")
 def Contact_Page():
-    return "Contact Page"
+    return render_template("contact.html")
 
 
 if __name__ == "__main__":
